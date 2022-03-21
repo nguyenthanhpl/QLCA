@@ -1,18 +1,17 @@
 @font-face {
     font-family: beVietnamPro-Regular;
-    src: url('fonts/Be_Vietnam_Pro/BeVietnamPro-Black.ttf');
+    src: url('../fonts/BeVietnamPro-Black.ttf');
 }
 
 @font-face {
     font-family: beVietnamPro-Bolt;
-    src: url('fonts/Be_Vietnam_Pro/BeVietnamPro-Bold.ttf');
+    src: url('../fonts/BeVietnamPro-Bold.ttf');
 }
 
 @font-face {
     font-family: beVietnamPro-Medium;
-    src: url('fonts/Be_Vietnam_Pro/BeVietnamPro-Medium.ttf');
+    src: url('../fonts/BeVietnamPro-Medium.ttf');
 }
-
 /*---------------------------------------------*/
 
 * {
@@ -32,14 +31,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: beVietnamPro-Regular;
-	font-size: 16px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-  text-align: center;
-  padding-top: 10px ;
-  padding-bottom: 10px ;
+    font-family: beVietnamPro-Regular;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /*---------------------------------------------*/
