@@ -1,0 +1,11 @@
+﻿.nav-item{
+    margin-top:auto;
+    margin-bottom:auto;
+    list-style:none;
+    text-decoration:none;
+    
+}
+.nav-item a {
+
+    text-decoration: none;
+}
