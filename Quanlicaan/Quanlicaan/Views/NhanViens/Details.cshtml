@@ -1,0 +1,98 @@
+﻿@model Quanlicaan.Models.NhanVien
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>NhanVien</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.HoTen)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.HoTen)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.GioiTinh)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.GioiTinh)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DiaChi)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DiaChi)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SDT)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SDT)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.username)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.username)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.upassword)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.upassword)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.trangthai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.trangthai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PhongBan.TenPB)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PhongBan.TenPB)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TaiKhoan.ID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TaiKhoan.ID)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
