@@ -10,9 +10,9 @@
     <link href="~/css/layout.css" rel="stylesheet" />
     <script src="~/Scripts/bootstrap.bundle.min.js"></script>
 
-    @RenderSection("header", required: false)
-
+    @RenderSection("head",required:false)
 </head>
+
 <body>
 
     <section class="clearfix header bg-danger">
@@ -20,7 +20,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Quản lý ăn ca</a>
-                   
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
@@ -29,7 +29,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="#">Giao diện</a></li>
-                                    <li><a class="dropdown-item" href="#">Người dùng</a></li>
+                                    <li><a class="dropdown-item" href="#">Nhan viên</a></li>
                                     <li><a class="dropdown-item" href="#">Phòng ban</a></li>
 
 
@@ -40,9 +40,8 @@
                                     Đăng ký ca ăn
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Cá nhân</a></li>
-                                    <li><a class="dropdown-item" href="#">Tập thể</a></li>
-                                    
+                                    <li><a class="dropdown-item" href="@Url.Action("Index","Dangkycanhan")">Cá nhân</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("Index","Dangkytheonhom")">Tập thể</a></li>
 
                                 </ul>
                             </li>
@@ -51,9 +50,9 @@
                                     Thống kê
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Cá nhân</a></li>
-                                    <li><a class="dropdown-item" href="#">Theo ngày</a></li>
-                                    <li><a class="dropdown-item" href="#">Theo Tháng</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("Canhan","Baocao")">Cá nhân</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("Theongay","Baocao")">Theo ngày</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("Theothang","Baocao")">Theo Tháng</a></li>
 
                                 </ul>
                             </li>
@@ -61,7 +60,7 @@
                         </ul>
                         <form class="nav-item dropdown">
                             <li class="nav-item">
-                                <a class="nav-dangxuat" href="#">Đăng xuất</a>
+                                <a class="nav-dangxuat" href="@Url.Action("Index","Login")">Đăng xuất</a>
                             </li>
                         </form>
                     </div>
@@ -69,16 +68,19 @@
             </nav>
         </div>
     </section>
-    <section class="clearfix-maincontent py-5">
+    <section class="clearfix-maincontent py-1">
         <div class="container-fluid">
             @RenderBody()
         </div>
     </section>
     <section class="clearfix-footer bg-gradient">
-        <div class="container-fluid text-white text-center">
-            <p> Create </p>
+        <div class="container-fluid text-black-50 text-center">
+            <p> Created by St </p>
         </div>
     </section>
+
+
     @RenderSection("footer", required: false)
 </body>
+
 </html>

@@ -235,3 +235,7 @@ E:\GitHub\QLCA\Quanlicaan\Quanlicaan\obj\Debug\Quanlicaan.csproj.CoreCompileInpu
 E:\GitHub\QLCA\Quanlicaan\Quanlicaan\obj\Debug\Quanlicaan.csproj.CopyComplete
 E:\GitHub\QLCA\Quanlicaan\Quanlicaan\obj\Debug\Quanlicaan.dll
 E:\GitHub\QLCA\Quanlicaan\Quanlicaan\obj\Debug\Quanlicaan.pdb
+E:\GitHub\QLCA\Quanlicaan\Quanlicaan\bin\EntityFramework.dll
+E:\GitHub\QLCA\Quanlicaan\Quanlicaan\bin\EntityFramework.SqlServer.dll
+E:\GitHub\QLCA\Quanlicaan\Quanlicaan\bin\EntityFramework.xml
+E:\GitHub\QLCA\Quanlicaan\Quanlicaan\bin\EntityFramework.SqlServer.xml
