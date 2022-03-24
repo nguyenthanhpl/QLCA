@@ -135,8 +135,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\BaocaoController.cs" />
-    <Compile Include="Controllers\DangkycanhanController.cs" />
-    <Compile Include="Controllers\DangkytheonhomController.cs" />
+    <Compile Include="Controllers\DangkycaanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -227,8 +226,8 @@
     <Content Include="images\kkkk.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -299,8 +298,8 @@
     <Content Include="Views\Baocao\Baocaocanhan.cshtml" />
     <Content Include="Views\Baocao\baocaotheongay.cshtml" />
     <Content Include="Views\Baocao\baocaotheothang.cshtml" />
-    <Content Include="Views\Dangkycanhan\dangkyancanhan.cshtml" />
-    <Content Include="Views\Dangkytheonhom\dangkyantheonhom.cshtml" />
+    <Content Include="Views\Dangkycaan\dangkyancanhan.cshtml" />
+    <Content Include="Views\Dangkycaan\dangkyantheonhom.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

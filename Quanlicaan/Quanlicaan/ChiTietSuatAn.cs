@@ -15,7 +15,7 @@ namespace Quanlicaan
     public partial class ChiTietSuatAn
     {
         public int ID { get; set; }
-        public string IDUser { get; set; }
+        public int IDUser { get; set; }
         public int Soluong { get; set; }
         public Nullable<int> IDSuatAn { get; set; }
         public int IDCaan { get; set; }

@@ -20,8 +20,7 @@ namespace Quanlicaan
             this.NhanViens = new HashSet<NhanVien>();
         }
     
-        public int STT { get; set; }
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string TenPB { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

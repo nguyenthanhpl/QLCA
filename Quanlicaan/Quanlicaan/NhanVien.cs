@@ -22,13 +22,12 @@ namespace Quanlicaan
             this.SuatAns = new HashSet<SuatAn>();
         }
     
-        public int STT { get; set; }
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string HoTen { get; set; }
         public bool GioiTinh { get; set; }
         public string DiaChi { get; set; }
         public string SDT { get; set; }
-        public string IDPhongBan { get; set; }
+        public int IDPhongBan { get; set; }
         public string username { get; set; }
         public string upassword { get; set; }
         public bool trangthai { get; set; }

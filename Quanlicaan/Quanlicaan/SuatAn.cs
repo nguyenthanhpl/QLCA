@@ -21,7 +21,7 @@ namespace Quanlicaan
         }
     
         public int ID { get; set; }
-        public string IDUser { get; set; }
+        public Nullable<int> IDUser { get; set; }
         public System.DateTime Thoigiandat { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

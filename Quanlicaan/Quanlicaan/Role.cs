@@ -14,8 +14,8 @@ namespace Quanlicaan
     
     public partial class Role
     {
-        public int STT { get; set; }
-        public string IDUser { get; set; }
+        public int ID { get; set; }
+        public Nullable<int> IDUser { get; set; }
         public string URole { get; set; }
     
         public virtual NhanVien NhanVien { get; set; }

@@ -6,12 +6,20 @@ using System.Web.Mvc;
 
 namespace Quanlicaan.Controllers
 {
-    public class DangkycanhanController : Controller
+    public class DangkycaanController : Controller
     {
-        // GET: Dangkycanhan
-        public ActionResult Index()
+        // GET: Dangkycaan
+        public ActionResult Canhan()
         {
             return View("dangkyancanhan");
         }
+
+
+
+        public ActionResult Tapthe()
+        {
+            return View("dangkyantheonhom");
+        }
+
     }
 }
