@@ -36,6 +36,7 @@
           <Property Name="username" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="upassword" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="trangthai" Type="bit" Nullable="false" />
+          <Property Name="ChucVu" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="PhongBan">
           <Key>
@@ -215,6 +216,7 @@
           <Property Name="username" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="upassword" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="trangthai" Type="Boolean" Nullable="false" />
+          <Property Name="ChucVu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ChiTietSuatAns" Relationship="Self.FK__ChiTietSu__IDUse__5535A963" FromRole="NhanVien" ToRole="ChiTietSuatAn" />
           <NavigationProperty Name="PhongBan" Relationship="Self.FK__NhanVien__IDPhon__3D5E1FD2" FromRole="NhanVien" ToRole="PhongBan" />
           <NavigationProperty Name="Roles" Relationship="Self.FK__Roles__IDUser__412EB0B6" FromRole="NhanVien" ToRole="Roles" />
@@ -329,7 +331,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QuanLiCaAnEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QuanLiCaAnEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CaAns" EntityType="Self.CaAn" />
           <EntitySet Name="ChiTietSuatAns" EntityType="Self.ChiTietSuatAn" />
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
@@ -367,7 +369,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuanLiCaAnModelStoreContainer" CdmEntityContainer="QuanLiCaAnEntities1">
+        <EntityContainerMapping StorageEntityContainer="QuanLiCaAnModelStoreContainer" CdmEntityContainer="QuanLiCaAnEntities2">
           <EntitySetMapping Name="CaAns">
             <EntityTypeMapping TypeName="QuanLiCaAnModel.CaAn">
               <MappingFragment StoreEntitySet="CaAn">
@@ -400,6 +402,7 @@
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="upassword" ColumnName="upassword" />
                 <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+                <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

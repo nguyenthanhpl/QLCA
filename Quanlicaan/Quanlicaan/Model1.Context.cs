@@ -13,10 +13,10 @@ namespace Quanlicaan
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QuanLiCaAnEntities1 : DbContext
+    public partial class QuanLiCaAnEntities2 : DbContext
     {
-        public QuanLiCaAnEntities1()
-            : base("name=QuanLiCaAnEntities1")
+        public QuanLiCaAnEntities2()
+            : base("name=QuanLiCaAnEntities2")
         {
         }
     

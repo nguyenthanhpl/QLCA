@@ -1,0 +1,56 @@
+﻿@{ 
+    string[] Tableheaders = new string[] { "ID"
+      ,"HoTen"
+      ,"GioiTinh"
+      ,"DiaChi"
+      ,"SDT"
+      ,"IDPhongBan"
+      ,"ChucVu"
+      ,"username"
+      ,"upassword"
+      ,"trangthai"
+       };
+}
+
+<div class="table">
+    <table class="table-bordered table-hover">
+        <thead>
+            <tr>
+                @{ 
+                    foreach (var head in Tableheaders)
+                    {
+                <th>
+                    @head
+                </th>
+                    }
+                }
+            </tr>
+        </thead>
+  
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (var Data in Model)
+                    {
+                        <tr>
+                            <td> @Data.ID </td>
+                            <td> @Data.HoTen </td>
+                            <td> @Data.GioiTinh </td>
+                            <td> @Data.DiaChi </td>
+                            <td> @Data.IDPhongBan </td>
+                            <td> @Data.ChucVu </td>
+                            <td> @Data.username </td>
+                            <td> @Data.upassword </td>
+                            <td> @Data.trangthai </td>
+
+                        </tr>
+
+
+                    }
+                }
+            }
+        </tbody>
+    </table>
+
+</div>

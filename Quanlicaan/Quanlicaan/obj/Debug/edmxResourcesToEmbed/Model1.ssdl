@@ -4,15 +4,15 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Thoigian" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="ChiTietSuatAn">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
-    <Property Name="IDUser" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" Nullable="false" />
     <Property Name="Soluong" Type="int" Nullable="false" />
     <Property Name="IDSuatAn" Type="int" />
     <Property Name="IDCaan" Type="int" Nullable="false" />
@@ -22,31 +22,30 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HoTen" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="GioiTinh" Type="bit" Nullable="false" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="SDT" Type="ntext" Nullable="false" />
-    <Property Name="IDPhongBan" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="IDPhongBan" Type="int" Nullable="false" />
     <Property Name="username" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="upassword" Type="char" MaxLength="10" Nullable="false" />
     <Property Name="trangthai" Type="bit" Nullable="false" />
+    <Property Name="ChucVu" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="PhongBan">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenPB" Type="nvarchar" MaxLength="30" Nullable="false" />
   </EntityType>
   <EntityType Name="Roles">
     <Key>
-      <PropertyRef Name="STT" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="STT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IDUser" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" />
     <Property Name="URole" Type="nvarchar" MaxLength="25" Nullable="false" />
   </EntityType>
   <EntityType Name="SuatAn">
@@ -54,7 +53,7 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IDUser" Type="char" MaxLength="10" />
+    <Property Name="IDUser" Type="int" />
     <Property Name="Thoigiandat" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
@@ -67,7 +66,7 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
-  <Association Name="FK__ChiTietSu__IDCaa__46E78A0C">
+  <Association Name="FK__ChiTietSu__IDCaa__571DF1D5">
     <End Role="CaAn" Type="Self.CaAn" Multiplicity="1" />
     <End Role="ChiTietSuatAn" Type="Self.ChiTietSuatAn" Multiplicity="*" />
     <ReferentialConstraint>
@@ -79,7 +78,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietSu__IDSua__45F365D3">
+  <Association Name="FK__ChiTietSu__IDSua__5629CD9C">
     <End Role="SuatAn" Type="Self.SuatAn" Multiplicity="0..1" />
     <End Role="ChiTietSuatAn" Type="Self.ChiTietSuatAn" Multiplicity="*" />
     <ReferentialConstraint>
@@ -91,7 +90,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ChiTietSu__IDUse__44FF419A">
+  <Association Name="FK__ChiTietSu__IDUse__5535A963">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="ChiTietSuatAn" Type="Self.ChiTietSuatAn" Multiplicity="*" />
     <ReferentialConstraint>
@@ -103,7 +102,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__NhanVien__IDPhon__398D8EEE">
+  <Association Name="FK__NhanVien__IDPhon__3D5E1FD2">
     <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="1" />
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
     <ReferentialConstraint>
@@ -115,8 +114,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Roles__IDUser__3D5E1FD2">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+  <Association Name="FK__Roles__IDUser__412EB0B6">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="Roles" Type="Self.Roles" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">
@@ -127,7 +126,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SuatAn__IDUser__4222D4EF">
+  <Association Name="FK__SuatAn__IDUser__52593CB8">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
     <End Role="SuatAn" Type="Self.SuatAn" Multiplicity="*" />
     <ReferentialConstraint>
@@ -147,27 +146,27 @@
     <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SuatAn" EntityType="Self.SuatAn" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__ChiTietSu__IDCaa__46E78A0C" Association="Self.FK__ChiTietSu__IDCaa__46E78A0C">
+    <AssociationSet Name="FK__ChiTietSu__IDCaa__571DF1D5" Association="Self.FK__ChiTietSu__IDCaa__571DF1D5">
       <End Role="CaAn" EntitySet="CaAn" />
       <End Role="ChiTietSuatAn" EntitySet="ChiTietSuatAn" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietSu__IDSua__45F365D3" Association="Self.FK__ChiTietSu__IDSua__45F365D3">
+    <AssociationSet Name="FK__ChiTietSu__IDSua__5629CD9C" Association="Self.FK__ChiTietSu__IDSua__5629CD9C">
       <End Role="SuatAn" EntitySet="SuatAn" />
       <End Role="ChiTietSuatAn" EntitySet="ChiTietSuatAn" />
     </AssociationSet>
-    <AssociationSet Name="FK__ChiTietSu__IDUse__44FF419A" Association="Self.FK__ChiTietSu__IDUse__44FF419A">
+    <AssociationSet Name="FK__ChiTietSu__IDUse__5535A963" Association="Self.FK__ChiTietSu__IDUse__5535A963">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="ChiTietSuatAn" EntitySet="ChiTietSuatAn" />
     </AssociationSet>
-    <AssociationSet Name="FK__NhanVien__IDPhon__398D8EEE" Association="Self.FK__NhanVien__IDPhon__398D8EEE">
+    <AssociationSet Name="FK__NhanVien__IDPhon__3D5E1FD2" Association="Self.FK__NhanVien__IDPhon__3D5E1FD2">
       <End Role="PhongBan" EntitySet="PhongBan" />
       <End Role="NhanVien" EntitySet="NhanVien" />
     </AssociationSet>
-    <AssociationSet Name="FK__Roles__IDUser__3D5E1FD2" Association="Self.FK__Roles__IDUser__3D5E1FD2">
+    <AssociationSet Name="FK__Roles__IDUser__412EB0B6" Association="Self.FK__Roles__IDUser__412EB0B6">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="Roles" EntitySet="Roles" />
     </AssociationSet>
-    <AssociationSet Name="FK__SuatAn__IDUser__4222D4EF" Association="Self.FK__SuatAn__IDUser__4222D4EF">
+    <AssociationSet Name="FK__SuatAn__IDUser__52593CB8" Association="Self.FK__SuatAn__IDUser__52593CB8">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="SuatAn" EntitySet="SuatAn" />
     </AssociationSet>

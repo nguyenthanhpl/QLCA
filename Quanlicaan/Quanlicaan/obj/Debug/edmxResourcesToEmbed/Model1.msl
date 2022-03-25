@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="QuanLiCaAnModelStoreContainer" CdmEntityContainer="QuanLiCaAnEntities">
+  <EntityContainerMapping StorageEntityContainer="QuanLiCaAnModelStoreContainer" CdmEntityContainer="QuanLiCaAnEntities2">
     <EntitySetMapping Name="CaAns">
       <EntityTypeMapping TypeName="QuanLiCaAnModel.CaAn">
         <MappingFragment StoreEntitySet="CaAn">
@@ -24,7 +24,6 @@
     <EntitySetMapping Name="NhanViens">
       <EntityTypeMapping TypeName="QuanLiCaAnModel.NhanVien">
         <MappingFragment StoreEntitySet="NhanVien">
-          <ScalarProperty Name="STT" ColumnName="STT" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
           <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
@@ -34,13 +33,13 @@
           <ScalarProperty Name="username" ColumnName="username" />
           <ScalarProperty Name="upassword" ColumnName="upassword" />
           <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PhongBans">
       <EntityTypeMapping TypeName="QuanLiCaAnModel.PhongBan">
         <MappingFragment StoreEntitySet="PhongBan">
-          <ScalarProperty Name="STT" ColumnName="STT" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="TenPB" ColumnName="TenPB" />
         </MappingFragment>
@@ -49,7 +48,7 @@
     <EntitySetMapping Name="Roles">
       <EntityTypeMapping TypeName="QuanLiCaAnModel.Role">
         <MappingFragment StoreEntitySet="Roles">
-          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="IDUser" ColumnName="IDUser" />
           <ScalarProperty Name="URole" ColumnName="URole" />
         </MappingFragment>
