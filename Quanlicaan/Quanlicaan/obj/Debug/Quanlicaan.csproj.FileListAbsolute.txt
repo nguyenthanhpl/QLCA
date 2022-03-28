@@ -638,3 +638,5 @@ E:\THUC TAP\QuanLyCaAn\QLCA\Quanlicaan\Quanlicaan\obj\Debug\Quanlicaan.csproj.Co
 E:\THUC TAP\QuanLyCaAn\QLCA\Quanlicaan\Quanlicaan\obj\Debug\Quanlicaan.csproj.CopyComplete
 E:\THUC TAP\QuanLyCaAn\QLCA\Quanlicaan\Quanlicaan\obj\Debug\Quanlicaan.dll
 E:\THUC TAP\QuanLyCaAn\QLCA\Quanlicaan\Quanlicaan\obj\Debug\Quanlicaan.pdb
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Quanlicaan\Quanlicaan\obj\Debug\Quanlicaan.Properties.Resource1.resources
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Quanlicaan\Quanlicaan\obj\Debug\Quanlicaan.csproj.GenerateResource.cache
