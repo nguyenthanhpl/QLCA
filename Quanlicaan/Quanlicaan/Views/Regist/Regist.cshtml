@@ -1,4 +1,6 @@
 ﻿
+@model  Quanlicaan.NhanVien
+
 @{
     Layout = null;
 }
@@ -15,12 +17,19 @@
     <div class="limiter">
         <div class="container-regist">
             <div class="wrap-regist">
-                <form class="regist-form validate-form">
+                @using (Html.BeginForm(new { @class = "regist-form validate-form" }))
+                {
+                    @Html.AntiForgeryToken()
                     <span class="regist-form-title">
                         Đăng kí thông tin người dùng
                     </span>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                   
+
                     <div class="wrap-input validate-input" data-validate="User's fullname is required">
-                        <input class="input" type="text" name="fullname" placeholder="Tên đầy đủ">
+                        @Html.TextBoxFor(model => model.HoTen, new { @class = "input", @type = "text", @name = "fullname", @placeholder = "Họ tên nhân viên", htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
                         <span class="focus-input"></span>
                         <span class="symbol-input">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -28,7 +37,8 @@
                     </div>
 
                     <div class="wrap-input validate-input" data-validate="Username is required">
-                        <input class="input" type="text" name="username" placeholder="Tên đăng nhập">
+                        @Html.TextBoxFor(model => model.username, new { @class = "input", @type = "text", @name = "username", @placeholder = "Tên đăng nhập", htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
                         <span class="focus-input"></span>
                         <span class="symbol-input">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -36,20 +46,28 @@
                     </div>
 
                     <div class="wrap-input validate-input" data-validate="Password is required">
-                        <input class="input" type="password" name="pass" placeholder="Mật khẩu">
+                        @Html.TextBoxFor(model => model.upassword, new { @class = "input", @type = "password", @name = "pass", @placeholder = "Mật khẩu", htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.upassword, "", new { @class = "text-danger" })
                         <span class="focus-input"></span>
                         <span class="symbol-input">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
                     </div>
 
+                    <p>Mã phòng ban</p>
+
                     <div class="select-department" data-validate="Department is required">
-                        <select>
-                            <option value="0">Chọn phòng ban</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+                        @*@Html.LabelFor(model => model.idphongban, "Mã phòng ban", htmlAttributes: new { @class = "container-checkbox" })*@
+                        @Html.DropDownList("IDPhongBan", new List<SelectListItem>
+                   {
+                       //new SelectListItem {Text = "pb001", Value = "pb001"},
+                       //new SelectListItem {Text = "pb002", Value = "pb002"},
+                       //new SelectListItem {Text = "pb003", Value = "pb003"},
+                       //new SelectListItem {Text = "pb004", Value = "pb004"},
+                       //new SelectListItem {Text = "pb005", Value = "pb005"},
+                       //new SelectListItem {Text = "pb005", Value = "pb005"},
+                   }, htmlAttributes: new { @class = "form-control" });
+                        @Html.ValidationMessageFor(model => model.IDPhongBan, "", new { @class = "text-danger" })
                         <span class="focus-input"></span>
                         <span class="symbol-input">
                             <i class="fa fa-lock" aria-hidden="true"></i>
@@ -58,32 +76,49 @@
 
                     <p>Quyền đăng kí</p>
 
-                    <div class="checkbox" data-validate="Registration is required">
-                        <label class="container-checkbox">
-                            Cá nhân
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-checkbox">
-                            Tập thể
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
+                    <div class="select-department" data-validate="Registration is required">
+                        @*@Html.LabelFor(model => model.quyendangky, "Quyền đăng kí", htmlAttributes: new { @class = "container-checkbox" })*@
+                        @Html.DropDownList("quyendangky", new List<SelectListItem>
+                                    {
+                                new SelectListItem {Text = "Cá nhân", Value = "true"},
+                                new SelectListItem {Text = "Tập thể", Value = "false"},
+                            }, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Roles, "", new { @class = "text-danger" })
+                        <span class="focus-input"></span>
+                        <span class="symbol-input">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
                     </div>
 
                     <p>Phân quyền</p>
 
-                    <div class="checkbox" data-validate="Role is required">
-                        <label class="container-checkbox">
-                            Admin
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container-checkbox">
-                            User
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
+                    <div class="select-department" data-validate="Registration is required">
+                        @Html.DropDownList("ChucVu", new List<SelectListItem>
+                                    {
+                                new SelectListItem {Text = "User", Value = "cv001"},
+                                new SelectListItem {Text = "Admin", Value = "cv002"},
+                            }, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ChucVu, "", new { @class = "text-danger" })
+                        <span class="focus-input"></span>
+                        <span class="symbol-input">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <p>Trạng thái</p>
+
+                    <div class="select-department" data-validate="Status is required">
+                        @*@Html.LabelFor(model => model.trangthai, "Trạng thái", htmlAttributes: new { @class = "container-checkbox" })*@
+                        @Html.DropDownList("trangthai", new List<SelectListItem>
+                                    {
+                                new SelectListItem {Text = "Active", Value = "true"},
+                                new SelectListItem {Text = "Inactive", Value = "false"},
+                            }, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.trangthai, "", new { @class = "text-danger" })
+                        <span class="focus-input"></span>
+                        <span class="symbol-input">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
                     </div>
 
                     <div class="container-login-form-btn">
@@ -91,8 +126,8 @@
                             Đăng kí
                         </button>
                     </div>
+                }
 
-                </form>
             </div>
         </div>
     </div>
