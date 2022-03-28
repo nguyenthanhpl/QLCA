@@ -552,8 +552,11 @@
     <Content Include="css\baocaotheothang.css" />
     <Content Include="css\dangkyancanhan.css" />
     <Content Include="css\dangkyannhom.css" />
+    <Content Include="css\deletenv.css" />
+    <Content Include="css\addnv.css" />
     <Content Include="css\layout.css" />
     <Content Include="css\login.css" />
+    <Content Include="css\editnv.css" />
     <Content Include="css\nv.css" />
     <Content Include="css\regist.css" />
     <Content Include="favicon.ico" />
@@ -652,7 +655,10 @@
     <Content Include="Views\Dangkycaan\dangkyancanhan.cshtml" />
     <Content Include="Views\Dangkycaan\dangkyantheonhom.cshtml" />
     <Content Include="Views\Regist\Regist.cshtml" />
-    <Content Include="Views\NhanVien\Index.cshtml" />
+    <Content Include="Views\NhanVien\Show.cshtml" />
+    <Content Include="Views\NhanVien\EditNV.cshtml" />
+    <Content Include="Views\NhanVien\AddNV.cshtml" />
+    <Content Include="Views\NhanVien\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
