@@ -6,23 +6,28 @@ using System.Web;
 
 namespace Quanlicaan.Models
 {
+
+
     public class UserModel
     {
 
-        private Model1 context = null;
+        private Model1 context1 = null;
         public UserModel()
         {
-            context = new Model1();
+
+            context1 = new Model1();
+
         }
-        public bool Login(string username, string passwords)
+         public bool Login(string username, string upassword)
         {
             object[] sqlParams =  {
                 new SqlParameter("@username",username),
-                new SqlParameter("@upassword", passwords),
+                new SqlParameter("@upassword", upassword),
             };
-            const string Sql = "spLogin @username,@upassword";
+
             var res =
-                context.Database.SqlQuery<bool>(Sql, sqlParams).SingleOrDefault<>();
+                context1.Database.SqlQuery<bool>("spLogin @username, @upassword", sqlParams)
+                .FirstOrDefault();
             return res;
         }
 
@@ -36,15 +41,15 @@ namespace Quanlicaan.Models
                 new SqlParameter("@Gioitinh", Gioitinh),
                 new SqlParameter("@Diachi", Diachi),
                 new SqlParameter("@SDT", SDT),
-                new SqlParameter("@IDPhongBan", Diachi),
-                new SqlParameter("@ChucVu", Diachi),
+                new SqlParameter("@IDPhongBan", IDPhongBan),
+                new SqlParameter("@ChucVu", ChucVu),
               
-                new SqlParameter("@Username", username),
-                new SqlParameter("@Password", passsword),
+                new SqlParameter("@username", username),
+                new SqlParameter("@upassword", passsword),
                
-                new SqlParameter("@Trangthai", trangthai)
+                new SqlParameter("@trangthai", trangthai)
             };
-            int res = context.Database.ExecuteSqlCommand("spInsertUser @HoTen, @GioiTinh,	@DiaChi  ,	@SDT,	@IDPhongBan ,	@ChucVu ,	@username,	@upassword ,	@trangthai )", parameters);
+            int res = context1.Database.ExecuteSqlCommand("spInsertUser @HoTen, @GioiTinh,	@DiaChi  ,	@SDT,	@IDPhongBan ,	@ChucVu ,	@username,	@upassword ,	@trangthai )", parameters);
             return res;
 
         }

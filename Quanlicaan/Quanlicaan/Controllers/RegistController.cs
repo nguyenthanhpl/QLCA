@@ -43,7 +43,7 @@ namespace Quanlicaan.Controllers
             }
             catch
             {
-                return View("Regist");
+                return View();
             }
         }
         

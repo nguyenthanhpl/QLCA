@@ -10,6 +10,7 @@ namespace Quanlicaan.Models
     {
         [Required]
         public string username { set; get; }
-        public string upassword { set; get; } 
+        public string upassword { set; get; }
+
     }
 }

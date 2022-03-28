@@ -49,6 +49,8 @@ namespace Quanlicaan
 
         public bool trangthai { get; set; }
 
+        public int? IDRole { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietSuatAn> ChiTietSuatAns { get; set; }
 
