@@ -10,3 +10,15 @@ E:\Tai lieu hoc tap\Training\Quanlicaan\Models\obj\Debug\Models.csproj.CoreCompi
 E:\Tai lieu hoc tap\Training\Quanlicaan\Models\obj\Debug\Models.csproj.CopyComplete
 E:\Tai lieu hoc tap\Training\Quanlicaan\Models\obj\Debug\Models.dll
 E:\Tai lieu hoc tap\Training\Quanlicaan\Models\obj\Debug\Models.pdb
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\bin\Debug\Models.dll.config
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\bin\Debug\Models.dll
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\bin\Debug\Models.pdb
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\bin\Debug\EntityFramework.dll
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\bin\Debug\EntityFramework.xml
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\obj\Debug\Models.dll
+C:\Users\nguye\OneDrive\Máy tính\QLAC\QLCA\Models\obj\Debug\Models.pdb
