@@ -53,13 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Framework\quanlicaanDbContext.cs" />
-    <Compile Include="Framework\tblCaAn.cs" />
-    <Compile Include="Framework\tblChiTietSuatAn.cs" />
-    <Compile Include="Framework\tblChucVu.cs" />
-    <Compile Include="Framework\tblNguoiDung.cs" />
-    <Compile Include="Framework\tblPhongBan.cs" />
-    <Compile Include="Framework\tblSuatAn.cs" />
+    <Compile Include="Framework\CaAn.cs" />
+    <Compile Include="Framework\ChiTietSuatAn.cs" />
+    <Compile Include="Framework\NhanVien.cs" />
+    <Compile Include="Framework\PhongBan.cs" />
+    <Compile Include="Framework\QlcaDbContext.cs" />
+    <Compile Include="Framework\Role.cs" />
+    <Compile Include="Framework\SuatAn.cs" />
+    <Compile Include="Framework\TaiKhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserModel.cs" />
   </ItemGroup>

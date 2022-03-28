@@ -10,3 +10,14 @@ E:\Tai lieu hoc tap\Training\Quanlicaan\Models\obj\Debug\Models.csproj.CoreCompi
 E:\Tai lieu hoc tap\Training\Quanlicaan\Models\obj\Debug\Models.csproj.CopyComplete
 E:\Tai lieu hoc tap\Training\Quanlicaan\Models\obj\Debug\Models.dll
 E:\Tai lieu hoc tap\Training\Quanlicaan\Models\obj\Debug\Models.pdb
+F:\GitHub\ESC\QLCA\Models\bin\Debug\Models.dll.config
+F:\GitHub\ESC\QLCA\Models\bin\Debug\Models.dll
+F:\GitHub\ESC\QLCA\Models\bin\Debug\Models.pdb
+F:\GitHub\ESC\QLCA\Models\bin\Debug\EntityFramework.dll
+F:\GitHub\ESC\QLCA\Models\bin\Debug\EntityFramework.SqlServer.dll
+F:\GitHub\ESC\QLCA\Models\bin\Debug\EntityFramework.xml
+F:\GitHub\ESC\QLCA\Models\bin\Debug\EntityFramework.SqlServer.xml
+F:\GitHub\ESC\QLCA\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+F:\GitHub\ESC\QLCA\Models\obj\Debug\Models.csproj.CopyComplete
+F:\GitHub\ESC\QLCA\Models\obj\Debug\Models.dll
+F:\GitHub\ESC\QLCA\Models\obj\Debug\Models.pdb

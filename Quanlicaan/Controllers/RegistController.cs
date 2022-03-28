@@ -1,4 +1,5 @@
-﻿using Models;
+﻿
+using Models;
 using Models.Framework;
 using System;
 using System.Collections.Generic;
@@ -18,29 +19,39 @@ namespace Quanlicaan.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(tblNguoiDung collecttion)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(NhanVien nhanvien)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
                     var model = new UserModel();
-                    int res = model.Create(collecttion.id, collecttion.hoten, collecttion.username,
-                        collecttion.password, collecttion.idphongban, collecttion.quyendangky,
-                        collecttion.idchucvu, collecttion.trangthai);
+                    int res = model.Create(
+                        nhanvien.ID,
+                        nhanvien.HoTen,
+                        nhanvien.GioiTinh,
+                        nhanvien.DiaChi,
+                        nhanvien.SDT,
+                        nhanvien.IDPhongBan,
+                        nhanvien.username,
+                        nhanvien.upassword,
+                        nhanvien.trangthai,
+                        nhanvien.ChucVu
+                        );
 
-                    if(res > 0)
+                    if (res > 0)
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "Login");
                     }
                     else
                     {
                         ModelState.AddModelError("", "Thêm mới không thành công");
                     }
-                    
+
                 }
-                return View(collecttion);
-            
+                return View(nhanvien);
+
             }
             catch
             {

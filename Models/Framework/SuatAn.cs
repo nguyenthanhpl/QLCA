@@ -6,23 +6,25 @@ namespace Models.Framework
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("tblPhongBan")]
-    public partial class tblPhongBan
+    [Table("SuatAn")]
+    public partial class SuatAn
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblPhongBan()
+        public SuatAn()
         {
-            tblNguoiDungs = new HashSet<tblNguoiDung>();
+            ChiTietSuatAns = new HashSet<ChiTietSuatAn>();
         }
 
-        [StringLength(12)]
-        public string id { get; set; }
+        public int ID { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string tenphongban { get; set; }
+        [StringLength(10)]
+        public string IDUser { get; set; }
+
+        public DateTime Thoigiandat { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblNguoiDung> tblNguoiDungs { get; set; }
+        public virtual ICollection<ChiTietSuatAn> ChiTietSuatAns { get; set; }
+
+        public virtual NhanVien NhanVien { get; set; }
     }
 }

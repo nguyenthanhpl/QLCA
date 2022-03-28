@@ -6,21 +6,21 @@ namespace Models.Framework
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("tblCaAn")]
-    public partial class tblCaAn
+    [Table("CaAn")]
+    public partial class CaAn
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblCaAn()
+        public CaAn()
         {
-            tblChiTietSuatAns = new HashSet<tblChiTietSuatAn>();
+            ChiTietSuatAns = new HashSet<ChiTietSuatAn>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int id { get; set; }
+        public int ID { get; set; }
 
-        public DateTime thoigian { get; set; }
+        public DateTime Thoigian { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblChiTietSuatAn> tblChiTietSuatAns { get; set; }
+        public virtual ICollection<ChiTietSuatAn> ChiTietSuatAns { get; set; }
     }
 }
