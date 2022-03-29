@@ -86,7 +86,7 @@
     </dt>
 
     <dd>
-        @Html.DisplayFor(model => model.IDRole)
+        @Html.DisplayFor(model => model.Role.URole)
     </dd>
 </div>
 
@@ -129,7 +129,7 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="btn-bottom">
+    <div class="btn-bottom" style="padding: 20px 12px">
         <div class="">
             <input type="submit" value="Xoá" class="btn" />
         </div>

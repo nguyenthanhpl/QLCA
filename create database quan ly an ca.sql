@@ -18,6 +18,7 @@ create table NhanVien(
 	SDT NText not null,
 	IDPhongBan int not null foreign key references PhongBan(ID),
 	ChucVu nvarchar(10) not null,
+	IDRole int not null foreign key references Roles(ID),
 	username char(10) not null,
 	upassword char(10) not null,
 	trangthai bit default 1 not null
@@ -25,9 +26,7 @@ create table NhanVien(
 )
 create table Roles(
 	ID int identity(1,1) not null primary key,
-	IDUser int foreign key references NhanVien(ID),
 	URole Nvarchar(25) not null,
-
 )
 
 

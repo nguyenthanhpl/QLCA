@@ -18,13 +18,10 @@ values
 
 select * from NhanVien
 delete from NhanVien
-insert into Roles(IDUser,URole)
+insert into Roles(URole)
 values
-('11',N'Quản lý'),
-('12',N'Nhân viên'),
-('13',N'Nhân viên'),
-('14',N'Nhân viên'),
-('15',N'Nhân viên')
+(N'Admin'),
+(N'User')
 
 insert into CaAn(Thoigian)
 values

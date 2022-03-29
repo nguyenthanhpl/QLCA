@@ -55,6 +55,11 @@ namespace Quanlicaan
                 .HasForeignKey(e => e.IDPhongBan)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Role>()
+                .HasMany(e => e.NhanViens)
+                .WithOptional(e => e.Role)
+                .HasForeignKey(e => e.IDrole);
+
             modelBuilder.Entity<SuatAn>()
                 .HasMany(e => e.ChiTietSuatAns)
                 .WithOptional(e => e.SuatAn)

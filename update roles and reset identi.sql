@@ -6,8 +6,9 @@ select * from Roles
 
 delete from Roles
 
-
-DBCC CHECKIDENT ('NhanVien', RESEED, 0);
+use QuanLiCaAn
+go
+DBCC CHECKIDENT ('Roles', RESEED, 0);
 GO
 
 insert into Roles(URole)
