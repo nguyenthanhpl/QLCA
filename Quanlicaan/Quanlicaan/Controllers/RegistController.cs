@@ -1,51 +1,37 @@
-﻿
-
-using Quanlicaan.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System;
 using System.Web.Mvc;
 
 namespace Quanlicaan.Controllers
 {
     public class RegistController : Controller
     {
+        private Model1 db = new Model1();
         // GET: Regist
         [HttpGet]
         public ActionResult Regist()
         {
-            return View("Regist");
+            return View();
         }
 
         [HttpPost]
-        public ActionResult Create(NhanVien collecttion)
+        public ActionResult Regist(NhanVien nv)
         {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    var model = new UserModel();
-                    int res = model.Create(collecttion.HoTen,collecttion.GioiTinh,collecttion.DiaChi,collecttion.SDT,collecttion.IDPhongBan,collecttion.ChucVu,collecttion.username,collecttion.upassword,collecttion.trangthai);
+            if (ModelState.IsValid)
 
-                    if(res > 0)
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "Thêm mới không thành công");
-                    }
-                    
-                }
-                return View(collecttion);
-            
-            }
-            catch
             {
-                return View();
+
+                db.NhanViens.Add(nv);
+
+                db.SaveChanges();
+
+                return RedirectToAction("Index");
+
             }
+
+            return View(nv);
         }
-        
+
     }
 }
+
+

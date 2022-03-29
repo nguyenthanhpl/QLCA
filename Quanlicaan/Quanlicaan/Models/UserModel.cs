@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Web;
 
 namespace Quanlicaan.Models
 {
@@ -18,18 +16,18 @@ namespace Quanlicaan.Models
             context1 = new Model1();
 
         }
-         public bool Login(string username, string upassword)
-        {
-            object[] sqlParams =  {
-                new SqlParameter("@username",username),
-                new SqlParameter("@upassword", upassword),
-            };
+        // public bool Login(string username, string upassword)
+        //{
+        //    object[] sqlParams =  {
+        //        new SqlParameter("@username",username),
+        //        new SqlParameter("@upassword", upassword),
+        //    };
 
-            var res =
-                context1.Database.SqlQuery<bool>("spLogin @username, @upassword", sqlParams)
-                .FirstOrDefault();
-            return res;
-        }
+        //    var res =
+        //        context1.Database.SqlQuery<bool>("spLogin @username, @upassword", sqlParams)
+        //        .FirstOrDefault();
+        //    return res;
+        //}
 
 
 

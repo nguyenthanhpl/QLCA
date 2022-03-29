@@ -27,7 +27,6 @@ namespace Quanlicaan.Controllers
         //SỬA NV
 
         public ActionResult EditNV(int id = 0)
-
         {
 
             NhanVien nv = db.NhanViens.Find(id);

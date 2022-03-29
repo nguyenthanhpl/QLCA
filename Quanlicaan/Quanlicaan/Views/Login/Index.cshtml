@@ -17,11 +17,11 @@
         <div class="container-login">
             <div class="wrap-login100">
                 <div class="login100-pic js-tilt" data-tilt>
-                    <img src="~/images/img-01.png" alt="IMG">
+                    <img src="~/images/img-01.png" alt="IMG" style="margin: 20px 20px">
                 </div>
-                @using (Html.BeginForm(new { @class = "login100-form validate-form" }))
-                {
-                    @Html.AntiForgeryToken()
+                @*@using (Html.BeginForm(new { @class = "login100-form validate-form" }))*@
+                
+                    @*@Html.AntiForgeryToken()*@
                     @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
                     <span class="login100-form-title">
                         Đăng nhập tài khoản
@@ -44,12 +44,17 @@
                         </span>
                     </div>
 
-                    <div class="container-login100-form-btn">
+                    @*<div class="container-login100-form-btn">
                         <button class="login100-form-btn">
                             Đăng nhập
                         </button>
-                    </div>
+                    </div>*@
+                    <div class="container-login100-form-btn">
+                    <a class="login100-form-btn" href="@Url.Action("Home", "Home" )" style="text-decoration:none">
+                        Đăng Nhập
+                    </a>
 
+                    </div>
                     <div class="text-center-p-t-136">
                         <a class="txt2" href="#">
                             <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
@@ -57,7 +62,7 @@
                             @Html.ActionLink("Đăng kí tài khoản", "Regist", "Regist")
                         </a>
                     </div>
-                }
+                
 
             </div>
         </div>

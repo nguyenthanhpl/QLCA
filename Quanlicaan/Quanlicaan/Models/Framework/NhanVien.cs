@@ -13,7 +13,6 @@ namespace Quanlicaan
         public NhanVien()
         {
             ChiTietSuatAns = new HashSet<ChiTietSuatAn>();
-            Roles = new HashSet<Role>();
             SuatAns = new HashSet<SuatAn>();
         }
 
@@ -49,15 +48,12 @@ namespace Quanlicaan
 
         public bool trangthai { get; set; }
 
-        public int? IDRole { get; set; }
+        public int IDRole { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietSuatAn> ChiTietSuatAns { get; set; }
 
         public virtual PhongBan PhongBan { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Role> Roles { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SuatAn> SuatAns { get; set; }

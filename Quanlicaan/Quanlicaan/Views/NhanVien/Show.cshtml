@@ -16,7 +16,7 @@
         <th>ID</th>
         <th>Họ và tên</th>
         <th>Địa chỉ</th>
-        <th>Giới tính</th>
+        <th>Giới tính</th>  
         <th>Số điện thoại</th>
         <th>Phòng ban</th>
         <th> Chức vụ</th>
@@ -65,8 +65,8 @@
         @Html.DisplayFor(modelItem => item.trangthai)
     </td>
     <td>
-        @Html.ActionLink("Sửa", "EditNV", new { id = item.ID }) |
-        @Html.ActionLink("Xoá", "Delete", new { id = item.ID })
+        @Html.ActionLink("Sửa", "EditNV", new { id = item.ID }) @*|
+        @Html.ActionLink("Xoá", "Delete", new { id = item.ID })*@
     </td>
 </tr>
     }

@@ -45,11 +45,6 @@ namespace Quanlicaan
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<NhanVien>()
-                .HasMany(e => e.Roles)
-                .WithOptional(e => e.NhanVien)
-                .HasForeignKey(e => e.IDUser);
-
-            modelBuilder.Entity<NhanVien>()
                 .HasMany(e => e.SuatAns)
                 .WithOptional(e => e.NhanVien)
                 .HasForeignKey(e => e.IDUser);

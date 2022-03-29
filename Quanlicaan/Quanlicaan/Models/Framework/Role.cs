@@ -10,12 +10,11 @@ namespace Quanlicaan
     {
         public int ID { get; set; }
 
-        public int? IDUser { get; set; }
+        
 
         [Required]
         [StringLength(25)]
         public string URole { get; set; }
-
-        public virtual NhanVien NhanVien { get; set; }
+        
     }
 }

@@ -60,9 +60,10 @@
                         @*@Html.LabelFor(model => model.idphongban, "Mã phòng ban", htmlAttributes: new { @class = "container-checkbox" })*@
                         @Html.DropDownList("IDPhongBan", new List<SelectListItem>
                    {
-                       //new SelectListItem {Text = "pb001", Value = "pb001"},
-                       //new SelectListItem {Text = "pb002", Value = "pb002"},
-                       //new SelectListItem {Text = "pb003", Value = "pb003"},
+                       new SelectListItem {Text = "Chọn phòng ban", Value = "0" },
+                       new SelectListItem {Text = "Kế toán", Value = "1"},
+                       new SelectListItem {Text = "Dân sự", Value = "2"},
+                       new SelectListItem {Text = "Kỹ thuật", Value = "3"},
                        //new SelectListItem {Text = "pb004", Value = "pb004"},
                        //new SelectListItem {Text = "pb005", Value = "pb005"},
                        //new SelectListItem {Text = "pb005", Value = "pb005"},
@@ -74,57 +75,15 @@
                         </span>
                     </div>
 
-                    <p>Quyền đăng kí</p>
+                   
 
-                    <div class="select-department" data-validate="Registration is required">
-                        @*@Html.LabelFor(model => model.quyendangky, "Quyền đăng kí", htmlAttributes: new { @class = "container-checkbox" })*@
-                        @Html.DropDownList("quyendangky", new List<SelectListItem>
-                                    {
-                                new SelectListItem {Text = "Cá nhân", Value = "true"},
-                                new SelectListItem {Text = "Tập thể", Value = "false"},
-                            }, htmlAttributes: new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.Roles, "", new { @class = "text-danger" })
-                        <span class="focus-input"></span>
-                        <span class="symbol-input">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-                    </div>
+                   
 
-                    <p>Phân quyền</p>
-
-                    <div class="select-department" data-validate="Registration is required">
-                        @Html.DropDownList("ChucVu", new List<SelectListItem>
-                                    {
-                                new SelectListItem {Text = "User", Value = "cv001"},
-                                new SelectListItem {Text = "Admin", Value = "cv002"},
-                            }, htmlAttributes: new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.ChucVu, "", new { @class = "text-danger" })
-                        <span class="focus-input"></span>
-                        <span class="symbol-input">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <p>Trạng thái</p>
-
-                    <div class="select-department" data-validate="Status is required">
-                        @*@Html.LabelFor(model => model.trangthai, "Trạng thái", htmlAttributes: new { @class = "container-checkbox" })*@
-                        @Html.DropDownList("trangthai", new List<SelectListItem>
-                                    {
-                                new SelectListItem {Text = "Active", Value = "true"},
-                                new SelectListItem {Text = "Inactive", Value = "false"},
-                            }, htmlAttributes: new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.trangthai, "", new { @class = "text-danger" })
-                        <span class="focus-input"></span>
-                        <span class="symbol-input">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-                    </div>
 
                     <div class="container-login-form-btn">
-                        <button class="login-form-btn">
-                            Đăng kí
-                        </button>
+                        <input type="submit" value="Đăng ký" class="login-form-btn">
+                           
+                        </input>
                     </div>
                 }
 
