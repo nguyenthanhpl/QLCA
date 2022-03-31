@@ -20,6 +20,7 @@ namespace Quanlicaan
         [Required]
         [StringLength(30)]
         public string TenPB { get; set; }
+      
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhanVien> NhanViens { get; set; }

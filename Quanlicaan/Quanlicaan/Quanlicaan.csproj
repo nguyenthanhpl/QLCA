@@ -501,6 +501,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\PhongBanController.cs" />
+    <Compile Include="DataAccess\DataAccessLayer.cs" />
     <Compile Include="Models\Framework\CaAn.cs" />
     <Compile Include="Models\Framework\ChiTietSuatAn.cs" />
     <Compile Include="Controllers\CaAnController.cs" />
@@ -531,6 +533,7 @@
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
     <Compile Include="Models\Framework\Role.cs" />
+    <Compile Include="Responsity\Responsity.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Models\Framework\SuatAn.cs" />
     <Compile Include="Models\Framework\sysdiagram.cs" />
@@ -564,6 +567,7 @@
     <Content Include="css\editnv.css" />
     <Content Include="css\nv.css" />
     <Content Include="css\regist.css" />
+    <Content Include="css\shome.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\OFL.txt" />
     <Content Include="Global.asax" />
@@ -589,6 +593,9 @@
     <Content Include="fonts\BeVietnamPro-Thin.ttf" />
     <Content Include="fonts\BeVietnamPro-ThinItalic.ttf" />
     <Content Include="images\kkkk.jpg" />
+    <Content Include="images\ss1.jpg" />
+    <Content Include="images\ss2.jpg" />
+    <Content Include="images\ss3.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -666,6 +673,9 @@
     <Content Include="Views\NhanVien\Delete.cshtml" />
     <Content Include="Views\Dangkycaan\Canhan.cshtml" />
     <Content Include="Views\CaAn\Index.cshtml" />
+    <Content Include="Views\PhongBan\ShowAll.cshtml" />
+    <Content Include="Views\PhongBan\EditPB.cshtml" />
+    <Content Include="Views\PhongBan\AddPB.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

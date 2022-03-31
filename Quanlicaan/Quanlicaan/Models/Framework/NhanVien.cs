@@ -35,7 +35,7 @@ namespace Quanlicaan
         public int IDPhongBan { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string ChucVu { get; set; }
 
         [Required]
